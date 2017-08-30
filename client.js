@@ -72,14 +72,24 @@ function Bonus(employee) {
 }
 
 //console.log('bonus test -> ', new Bonus(hunter));
+var bonusList = [];
 
 function checkEmployees( listOfEmployees ) {
-    var bonusList = [];
     for (var i = 0; i < listOfEmployees.length; i++) {
         bonusList.push(new Bonus(listOfEmployees[i]));
-        console.log('Employee Payout -> ', bonusList[i]);
-    }
+        console.log('Employee Payout -> ', bonusList[i]); 
+    };
 }
 
-
 checkEmployees(employees);
+
+console.log(bonusList);
+
+// move onto Hard Mode
+document.getElementById("name").innerHTML = bonusList[0].name;
+
+
+
+
+
+
