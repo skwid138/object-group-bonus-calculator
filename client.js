@@ -82,10 +82,8 @@ function checkEmployees( listOfEmployees ) {
 }
 
 checkEmployees(employees);
-
-console.log(bonusList);
-
 // move onto Hard Mode
+
 document.getElementById("name").innerHTML = bonusList[0].name;
 
 
