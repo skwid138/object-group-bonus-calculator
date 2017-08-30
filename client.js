@@ -58,7 +58,7 @@ function bonusCalc(rating, salary, employeeNumber) {
     return percentage;
 };
 
-console.log(bonusCalc(5, '64000', '1234'));
+// console.log(bonusCalc(5, '64000', '1234'));
 
 // takes an employee object and makes a new object with bonus amounts
 function Bonus(employee) {
@@ -68,10 +68,18 @@ function Bonus(employee) {
     this.totalCompensation = this.totalBonus + parseInt(employee.annualSalary);
     this.totalBonus = this.totalBonus.toString();
     this.totalCompensation = this.totalCompensation.toString();
-    console.log('Employee Payout -> ', this.totalCompensation);
+    // console.log('Employee Payout -> ', this.totalCompensation);
 }
 
-console.log('bonus test -> ', new Bonus(hunter));
+//console.log('bonus test -> ', new Bonus(hunter));
+
+function checkEmployees( listOfEmployees ) {
+    var bonusList = [];
+    for (var i = 0; i < listOfEmployees.length; i++) {
+        bonusList.push(new Bonus(listOfEmployees[i]));
+        console.log('Employee Payout -> ', bonusList[i]);
+    }
+}
 
 
-
+checkEmployees(employees);
