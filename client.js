@@ -74,6 +74,7 @@ function Bonus(employee) {
 //console.log('bonus test -> ', new Bonus(hunter));
 var bonusList = [];
 
+// loops through employees and adds them to a global array
 function checkEmployees( listOfEmployees ) {
     for (var i = 0; i < listOfEmployees.length; i++) {
         bonusList.push(new Bonus(listOfEmployees[i]));
