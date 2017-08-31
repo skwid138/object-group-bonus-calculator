@@ -5,7 +5,9 @@ button {
 }
 
 table, th, td {
-    border: solid red;
+    border: solid green;
+    text-align: center;
+    color: red;
 }
 
 button:disabled {
