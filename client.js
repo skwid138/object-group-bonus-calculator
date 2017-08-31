@@ -84,10 +84,19 @@ function checkEmployees( listOfEmployees ) {
 checkEmployees(employees);
 // move onto Hard Mode
 
-document.getElementById("name").innerHTML = bonusList[0].name;
+// document.getElementById("name").innerHTML = bonusList[0].name;
 
 
+var onReady = function() {
+    for (var i = 0; i < bonusList.length; i++) {
+        $("#row" + i).append("<td><span id='name'>" + bonusList[i].name + "</span></td>");
+        $("#row" + i).append("<td><span id='percent'>" + bonusList[i].bonusPercentage + "</span></td>");
+        $("#row" + i).append("<td><span id='bonus'>" + bonusList[i].totalBonus + "</span></td>");;
+        $("#row" + i).append("<td><span id='comp'>" + bonusList[i].totalCompensation + "</span></td>");
+    }
+}
+var clickMe = function () {
+    $('button').on('click', onReady)
+}
 
-
-
-
+$(document).ready(clickMe);
