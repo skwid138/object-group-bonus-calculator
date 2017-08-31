@@ -1,0 +1,14 @@
+button {
+    color: blue;
+    background-color: orange;
+    text-align: center;
+}
+
+table, th, td {
+    border: solid red;
+}
+
+button:disabled {
+    color: red;
+    background-color: black;
+}
